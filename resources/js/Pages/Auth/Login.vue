@@ -49,7 +49,7 @@ const submit = () => {
                     </div>
                     <div>
                         <p class="text-xs uppercase tracking-wide text-indigo-500 font-bold">Welcome back</p>
-                        <h1 class="text-xl font-bold text-slate-900">Log in to StoryTime</h1>
+                        <h1 class="text-xl font-bold text-slate-900">Log in to Story Time</h1>
                     </div>
                 </div>
 
