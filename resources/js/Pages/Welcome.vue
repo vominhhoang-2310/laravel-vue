@@ -43,6 +43,8 @@ const setCategory = (category) => {
 </script>
 
 <template>
+
+    <Head title="Welcome" />
     <GuestLayout fluid hideNav>
         <div class="welcome-shell relative min-h-screen overflow-x-hidden text-slate-800">
 
@@ -102,8 +104,7 @@ const setCategory = (category) => {
                         </span>
                     </h1>
                     <p class="mt-4 text-sm text-slate-600">
-                        Browse the latest stories from the community. Sign in to add more, edit details, and keep your
-                        library fresh.
+                        Browse the latest stories from the community
                     </p>
 
                     <!-- Modern Pills Filter -->
@@ -172,7 +173,7 @@ const setCategory = (category) => {
 
                     <div v-if="!featuredStories.length"
                         class="col-span-full rounded-2xl bg-white/80 p-6 text-center text-sm text-gray-600 shadow-inner">
-                        No stories published yet. Sign in to add your first one.
+                        No stories published yet
                     </div>
                 </section>
             </main>
