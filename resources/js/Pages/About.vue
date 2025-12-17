@@ -10,10 +10,9 @@ import SideCharacters from '@/Components/SideCharacters.vue';
     <GuestLayout fluid>
 
         <Head title="About" />
-
         <div class="flex min-h-screen flex-col">
             <SideCharacters />
-            <div class="relative z-10 mx-auto max-w-5xl px-4 pt-28 pb-12 flex-1">
+            <div class="relative z-10 mx-auto max-w-5xl px-4 pt-[160px] pb-12 flex-1">
                 <section class="rounded-3xl bg-white/90 p-8 shadow-soft ring-1 ring-white/70 backdrop-blur">
                     <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
                         <div>
@@ -117,7 +116,6 @@ import SideCharacters from '@/Components/SideCharacters.vue';
                 <Footer />
             </div>
         </div>
-
         <MusicButton />
     </GuestLayout>
 </template>

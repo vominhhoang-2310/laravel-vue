@@ -4,8 +4,8 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <footer
-        class="sticky bottom-0 z-20 mt-12 flex flex-wrap items-center justify-between gap-4 bg-white/90 px-6 py-4 text-sm text-slate-700 shadow-soft ring-1 ring-white/60 backdrop-blur">
-        <div class="flex items-center gap-3 text-slate-800">
+        class="sticky bottom-0 z-20 flex flex-wrap items-center justify-between gap-4 bg-white/90 px-6 py-4 text-sm text-slate-700 shadow-soft ring-1 ring-white/60 backdrop-blur max-[395px]:flex-col max-[395px]:items-center">
+        <div class="flex items-center gap-3 text-slate-800 max-[395px]:justify-center">
             <span
                 class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-4 w-4" fill="currentColor">
@@ -19,16 +19,18 @@ import { Link } from '@inertiajs/vue3';
             </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-5 text-sm text-slate-700">
+        <div
+            class="flex flex-wrap items-center gap-5 text-sm text-slate-700 max-[395px]:w-full max-[395px]:justify-center">
             <Link
                 class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 :href="route('about')">
                 About
             </Link>
-            <a class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                href="#">
+            <Link
+                class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                :href="route('contact')">
                 Contact
-            </a>
+            </Link>
         </div>
     </footer>
 </template>

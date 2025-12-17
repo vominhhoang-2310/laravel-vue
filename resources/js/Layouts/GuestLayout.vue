@@ -48,7 +48,7 @@ defineProps({
         </div>
 
         <div class="relative z-10 flex min-h-screen"
-            :class="fluid ? 'flex-col items-stretch px-0 pt-6 pb-0' : 'items-center justify-center px-4 py-12'">
+            :class="fluid ? 'flex-col items-stretch px-0 pb-0' : 'items-center justify-center px-4 py-12'">
             <div v-if="!fluid"
                 class="w-full max-w-lg rounded-2xl bg-white/90 p-8 shadow-soft ring-1 ring-white/60 backdrop-blur">
                 <slot />
