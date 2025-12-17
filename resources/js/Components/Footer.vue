@@ -1,3 +1,7 @@
+<script setup>
+import { Link } from '@inertiajs/vue3';
+</script>
+
 <template>
     <footer
         class="sticky bottom-0 z-20 mt-12 flex flex-wrap items-center justify-between gap-4 bg-white/90 px-6 py-4 text-sm text-slate-700 shadow-soft ring-1 ring-white/60 backdrop-blur">
@@ -10,16 +14,17 @@
                 </svg>
             </span>
             <div class="leading-tight">
-                <p class="text-xs uppercase tracking-wide text-slate-500">StoryTime</p>
+                <p class="text-xs uppercase tracking-wide text-slate-500">Story Time</p>
                 <p class="text-sm font-bold text-slate-800">Cozy stories, happy kids.</p>
             </div>
         </div>
 
         <div class="flex flex-wrap items-center gap-5 text-sm font-semibold text-slate-700">
-            <a class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                href="#">
+            <Link
+                class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                :href="route('about')">
                 About
-            </a>
+            </Link>
             <a class="hover:text-indigo-600 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 href="#">
                 Contact

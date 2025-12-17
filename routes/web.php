@@ -33,6 +33,10 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
 Route::get('/dashboard', function () {
     $totalStories = Story::count();
     $weeklyQuery = Story::whereBetween('created_at', [
