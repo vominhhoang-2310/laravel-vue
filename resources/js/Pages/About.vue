@@ -61,11 +61,11 @@ import SideCharacters from '@/Components/SideCharacters.vue';
                             <h2 class="text-xl font-semibold text-indigo-900">For kids</h2>
                             <ul class="mt-3 space-y-2 text-slate-700">
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
                                     <span>Large, friendly typography and bright visuals.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-1 h-2 w-2 rounded-full bg-indigo-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
                                     <span>Easy-to-understand layout that makes picking a book feel fun and
                                         independent.</span>
                                 </li>
@@ -75,11 +75,11 @@ import SideCharacters from '@/Components/SideCharacters.vue';
                             <h2 class="text-xl font-semibold text-emerald-900">For parents</h2>
                             <ul class="mt-3 space-y-2 text-slate-700">
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>
                                     <span>Clean, modern interface with simple organization.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>
                                     <span>Quickly find the right story for bedtime, quiet time, or on-the-go
                                         reading.</span>
                                 </li>
