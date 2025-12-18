@@ -50,8 +50,8 @@ const setCategory = (category) => {
 
             <div class="fixed left-0 right-0 top-6 z-30 flex justify-center px-4">
                 <nav
-                    class="glass flex w-full max-w-6xl items-center justify-between rounded-full px-6 py-3 shadow-soft transition">
-                    <div class="flex items-center gap-3">
+                    class="glass flex w-full max-w-6xl flex-col gap-3 rounded-3xl px-6 py-4 shadow-soft transition md:flex-row md:items-center md:justify-between md:rounded-full md:py-3">
+                    <div class="flex items-center gap-3 md:flex-none">
                         <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-5 w-5"
@@ -65,9 +65,9 @@ const setCategory = (category) => {
                             Story Time
                         </span>
                     </div>
-                    <div class="flex flex-1 items-center justify-end gap-3 pl-4">
+                    <div class="flex w-full items-center justify-end gap-3 md:w-auto md:flex-1 md:pl-4">
                         <SearchBar v-model="searchTerm" placeholder="Search stories..." label="Search stories"
-                            class="hidden md:block md:max-w-xs md:flex-1" />
+                            class="w-full md:max-w-xs md:flex-1" />
                         <Link v-if="canLogin" :href="route('login')"
                             class="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold py-2 px-6 rounded-full hover:shadow-glow-pink transition-all transform hover:-translate-y-0.5 hidden md:block">
                             Add books
@@ -85,8 +85,8 @@ const setCategory = (category) => {
             <SideCharacters />
 
 
-            <main class="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-28">
-                <header class="mx-auto mb-12 max-w-3xl text-center">
+            <main class="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-36 md:pt-28">
+                <header class="mx-auto mb-12 max-w-3xl text-center mt-[15px]">
                     <span
                         class="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-sm font-bold tracking-wide text-indigo-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" viewBox="0 0 576 512"
