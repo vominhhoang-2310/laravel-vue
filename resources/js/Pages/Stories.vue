@@ -110,13 +110,13 @@ const handlePdfChange = (event) => {
 };
 
 const submit = () => {
-    const hasNewThumbnail = form.thumbnail instanceof File;
-    const hasNewPdf = form.pdf_link instanceof File;
-
     if (isEditing.value) {
-        form.put(route('stories.update', activeStoryId.value), {
+        form.transform((data) => ({ ...data, _method: 'put' })).post(route('stories.update', activeStoryId.value), {
             preserveScroll: true,
-            forceFormData: hasNewThumbnail || hasNewPdf,
+            forceFormData: true,
+            onFinish: () => {
+                form.transform((data) => data);
+            },
             onSuccess: () => {
                 liveMessage.value = 'Story updated.';
                 startCreate();
