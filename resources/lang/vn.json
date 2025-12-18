@@ -1,0 +1,111 @@
+{
+    "nav": {
+        "backHome": "Về trang chủ",
+        "addBooks": "Thêm truyện",
+        "dashboard": "Bảng điều khiển",
+        "stories": "Truyện",
+        "profile": "Chỉnh sửa hồ sơ",
+        "logout": "Đăng xuất"
+    },
+    "welcome": {
+        "tag": "Sách nổi bật",
+        "headlineLead": "Cùng khám phá cuộc phiêu lưu",
+        "headlineHighlight": "siêu hấp dẫn",
+        "subhead": "Xem những câu chuyện mới nhất từ mọi người nhé",
+        "category": {
+            "animals": "Động vật",
+            "spaces": "Vũ trụ",
+            "life": "Cuộc sống quanh ta"
+        },
+        "openStory": "Mở truyện",
+        "noImage": "Chưa có ảnh",
+        "empty": "Chưa có truyện được đăng"
+    },
+    "about": {
+        "eyebrow": "Giới thiệu",
+        "title": "Chào mừng đến với Story Time",
+        "introOne": "Story Time là thư viện số ấm áp, vui tươi dành cho cha mẹ và các bé từ 3–8 tuổi cùng đọc mỗi ngày. Story Time được tạo ra để giúp bạn lưu trữ, sắp xếp và đọc lại những câu chuyện thiếu nhi yêu thích ở một nơi thật gọn gàng. Dù là truyện trước giờ ngủ, vài phút đọc nhanh sau giờ học, hay cuối tuần cả nhà cùng đọc, Story Time luôn sẵn sàng đồng hành.",
+        "introTwo": "Đây là một dự án cá nhân, nhưng bắt nguồn từ một điều rất lớn: mình thật sự quan tâm đến giáo dục sớm và sức mạnh của việc đọc truyện trong những năm đầu đời. Đọc truyện giúp trẻ phát triển từ vựng, khả năng hiểu, trí tưởng tượng, sự tập trung, và quan trọng nhất là nuôi dưỡng tình yêu với sách. Khi bố mẹ đọc cùng con, khoảnh khắc ấy còn trở thành thời gian kết nối đầy yêu thương — con học được nhiều hơn cả chữ.",
+        "forKids": "Dành cho bé",
+        "kidsPointOne": "Chữ to, dễ nhìn cùng hình ảnh tươi sáng.",
+        "kidsPointTwo": "Bố cục đơn giản để bé tự chọn truyện một cách vui vẻ và độc lập.",
+        "forParents": "Dành cho phụ huynh",
+        "parentsPointOne": "Giao diện gọn gàng, hiện đại và dễ quản lý.",
+        "parentsPointTwo": "Dễ tìm truyện theo chủ đề, giúp bạn chọn đúng câu chuyện cho đúng thời điểm",
+        "closingOne": "Mình cũng chú ý đến trải nghiệm thân thiện: tương phản rõ, khoảng cách thoáng, nút bấm lớn cho “tay nhỏ”, để việc đọc truyện trở nên dễ dàng và không gây nản.",
+        "closingTwo": "Story Time là cách mình đóng góp cho cộng đồng: xây dựng một nơi an toàn, dễ dùng, khuyến khích thói quen đọc truyện và hỗ trợ các gia đình nuôi dưỡng tình yêu học tập thông qua kể chuyện.",
+        "closingThanks": "Cảm ơn bạn đã ghé thăm — chúc gia đình mình có thật nhiều giờ đọc truyện vui vẻ nhen!"
+    },
+    "stories": {
+        "title": "Trình tạo truyện",
+        "help": "Nhập ngắn gọn, dễ hiểu. Tải ảnh bìa và tệp PDF từ thiết bị của bạn.",
+        "fields": {
+            "title": "Tiêu đề",
+            "author": "Tác giả",
+            "year": "Năm xuất bản",
+            "category": "Thể loại",
+            "pdf": "Tải PDF",
+            "thumbnail": "Tải ảnh bìa",
+            "description": "Mô tả"
+        },
+        "buttons": {
+            "add": "Thêm truyện",
+            "update": "Cập nhật truyện",
+            "cancel": "Hủy"
+        },
+        "selectCategory": "Chọn thể loại",
+        "statuses": {
+            "added": "Đã thêm truyện.",
+            "updated": "Đã cập nhật truyện.",
+            "removed": "Đã xóa truyện."
+        },
+        "deleteConfirm": "Xóa truyện này?"
+    },
+    "savedStories": {
+        "title": "Truyện đã lưu",
+        "subtitle": "Bấm vào truyện để chỉnh sửa.",
+        "count": "{count} truyện",
+        "empty": "Chưa có truyện. Hãy thêm truyện bằng biểu mẫu bên trái.",
+        "noImage": "Chưa có ảnh",
+        "openPdf": "Mở PDF",
+        "delete": "Xóa"
+    },
+    "contact": {
+        "eyebrow": "Liên hệ",
+        "title": "Kết nối với mình",
+        "p1": "Cảm ơn bạn đã quan tâm đến Story Time! Đây là nền tảng hỗ trợ phụ huynh và các độc giả nhí (3–8 tuổi) cùng đọc truyện mỗi ngày, vì vậy mình luôn rất vui khi nhận được lời nhắn từ cộng đồng.",
+        "p2": "Nếu bạn có câu hỏi, góp ý, hoặc muốn chia sẻ ý tưởng để cải thiện trải nghiệm, hãy liên hệ với mình bất cứ lúc nào. Mình cũng rất hoan nghênh nếu bạn muốn trở thành cộng tác viên — ví dụ như gợi ý hoặc đóng góp truyện phù hợp cho bé.",
+        "p3": "Mình sẽ cố gắng phản hồi sớm nhất có thể. Cảm ơn bạn đã ủng hộ một dự án nhỏ được làm từ tình yêu với giáo dục và những câu chuyện dành cho trẻ em.",
+        "form": {
+            "name": "Tên",
+            "email": "Email",
+            "subject": "Chủ đề",
+            "upload": "Tải tệp (không bắt buộc)",
+            "message": "Lời nhắn",
+            "send": "Gửi",
+            "subjects": {
+                "inquiry": "Thắc mắc",
+                "feedback": "Góp ý/đề xuất",
+                "bug": "Báo lỗi",
+                "feature": "Yêu cầu tính năng",
+                "contribute": "Trở thành cộng tác viên"
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Góc kể chuyện ấm áp cho bé",
+        "about": "Giới thiệu",
+        "contact": "Liên hệ"
+    },
+    "common": {
+        "searchStories": "Tìm truyện nè...",
+        "openStory": "Mở truyện",
+        "noStories": "Chưa có truyện được đăng",
+        "noImage": "Chưa có ảnh",
+        "password": "Mật khẩu",
+        "forgotPassword": "Quên mật khẩu?",
+        "rememberMe": "Ghi nhớ đăng nhập",
+        "login": "Đăng nhập",
+        "hiThere": "Chào bạn nhỏ"
+    }
+}

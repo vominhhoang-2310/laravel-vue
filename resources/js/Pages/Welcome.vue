@@ -6,6 +6,8 @@ import SearchBar from '@/Components/SearchBar.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import MusicButton from '@/Components/MusicButton.vue';
 import SideCharacters from '@/Components/SideCharacters.vue';
+import LocaleSwitch from '@/Components/LocaleSwitch.vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
     canLogin: Boolean,
@@ -18,6 +20,7 @@ const props = defineProps({
 
 const searchTerm = ref('');
 const activeCategory = ref('all');
+const { t } = useI18n();
 
 const filteredStories = computed(() => {
     const term = searchTerm.value.trim().toLowerCase();
@@ -44,14 +47,14 @@ const setCategory = (category) => {
 
 <template>
 
-    <Head title="Welcome" />
+    <Head title="Story Time" />
     <GuestLayout fluid hideNav>
         <div class="welcome-shell relative min-h-screen overflow-x-hidden text-slate-800">
 
             <div class="fixed left-0 right-0 top-6 z-30 flex justify-center px-4">
                 <nav
                     class="glass flex w-full max-w-6xl flex-col gap-3 rounded-3xl px-6 py-4 shadow-soft transition md:flex-row md:items-center md:justify-between md:rounded-full md:py-3">
-                    <div class="flex items-center gap-3 md:flex-none">
+                    <div class="flex w-full items-center gap-3 md:w-auto md:flex-none">
                         <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-5 w-5"
@@ -64,14 +67,21 @@ const setCategory = (category) => {
                             class="text-2xl font-bold text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text">
                             Story Time
                         </span>
+                        <div class="ml-auto md:hidden">
+                            <LocaleSwitch />
+                        </div>
                     </div>
                     <div class="flex w-full items-center justify-end gap-3 md:w-auto md:flex-1 md:pl-4">
-                        <SearchBar v-model="searchTerm" placeholder="Search stories..." label="Search stories"
-                            class="w-full md:max-w-xs md:flex-1" />
+                        <SearchBar v-model="searchTerm" :placeholder="t('common.searchStories')"
+                            :label="t('common.searchStories')" class="w-full md:max-w-xs md:flex-1" />
                         <Link v-if="canLogin" :href="route('login')"
                             class="bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold py-2 px-6 rounded-full hover:shadow-glow-pink transition-all transform hover:-translate-y-0.5 hidden md:block">
-                            Add books
+                            {{ t('nav.addBooks') }}
                         </Link>
+                        <div class="hidden md:block">
+                            <LocaleSwitch />
+                        </div>
+
                         <!-- 
                     <Link v-if="canRegister" :href="route('register')"
                         class="hidden items-center rounded-full bg-gradient-to-r from-pink-500 to-rose-500 px-5 py-2 text-sm font-semibold text-white shadow-glow-pink transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-300 sm:inline-flex">
@@ -81,11 +91,8 @@ const setCategory = (category) => {
                     </div>
                 </nav>
             </div>
-
             <SideCharacters />
-
-
-            <main class="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-36 md:pt-28">
+            <main class="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-40 md:pt-28">
                 <header class="mx-auto mb-12 max-w-3xl text-center mt-[15px]">
                     <span
                         class="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-sm font-bold tracking-wide text-indigo-600">
@@ -94,17 +101,17 @@ const setCategory = (category) => {
                             <path
                                 d="M287.9 17.8L354.7 150l146 21.2c26.2 3.8 36.7 36 17.7 54.6L409.3 343.7l25 145.5c4.5 26.1-23 46-46.4 33.7L288 439.6 188 522.9c-23.4 12.3-50.9-7.6-46.4-33.7l25-145.5-108.1-117.9c-19-18.6-8.5-50.8 17.7-54.6L221.3 150 288.1 17.8c11.7-23.6 45.8-23.9 57.5 0z" />
                         </svg>
-                        Popular books
+                        {{ t('welcome.tag') }}
                     </span>
                     <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
-                        Discover your next
+                        {{ t('welcome.headlineLead') }}
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                            big adventure
+                            {{ t('welcome.headlineHighlight') }}
                         </span>
                     </h1>
                     <p class="mt-4 text-sm text-slate-600">
-                        Browse the latest stories from the community
+                        {{ t('welcome.subhead') }}
                     </p>
 
                     <!-- Modern Pills Filter -->
@@ -117,7 +124,7 @@ const setCategory = (category) => {
                                 :class="activeCategory === 'Animals' ? 'bg-white/20 text-white' : 'bg-indigo-100 text-indigo-500 group-hover:bg-white/20 group-hover:text-white'">
                                 <i class="fa-solid fa-paw"></i>
                             </span>
-                            Animals
+                            {{ t('welcome.category.animals') }}
                         </button>
                         <button type="button" @click="setCategory('Spaces')" :aria-pressed="activeCategory === 'Spaces'"
                             class="px-6 py-3 rounded-full font-semibold transition-all shadow-sm flex items-center group"
@@ -126,7 +133,7 @@ const setCategory = (category) => {
                                 :class="activeCategory === 'Spaces' ? 'bg-white/20 text-white' : 'bg-pink-100 text-pink-500 group-hover:bg-white/20 group-hover:text-white'">
                                 <i class="fa-solid fa-rocket"></i>
                             </span>
-                            Spaces
+                            {{ t('welcome.category.spaces') }}
                         </button>
                         <button type="button" @click="setCategory('Life')" :aria-pressed="activeCategory === 'Life'"
                             class="px-6 py-3 rounded-full font-semibold transition-all shadow-sm flex items-center group"
@@ -135,7 +142,7 @@ const setCategory = (category) => {
                                 :class="activeCategory === 'Life' ? 'bg-white/20 text-white' : 'bg-emerald-100 text-emerald-500 group-hover:bg-white/20 group-hover:text-white'">
                                 <i class="fa-solid fa-leaf"></i>
                             </span>
-                            Life
+                            {{ t('welcome.category.life') }}
                         </button>
                     </div>
                 </header>
@@ -151,21 +158,21 @@ const setCategory = (category) => {
                                 loading="lazy" decoding="async" />
                             <div v-else
                                 class="flex h-full items-center justify-center text-sm font-semibold text-indigo-500">
-                                No image
+                                {{ t('welcome.noImage') }}
                             </div>
                             <div
                                 class="absolute inset-0 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100">
                             </div>
                         </div>
                         <div class="flex flex-1 flex-col px-2 pb-2 pt-4">
-                            <h2 class="text-lg leading-tight text-slate-900 line-clamp-2 text-center comic-relief-bold">
+                            <h2 class="text-lg leading-tight text-slate-900 line-clamp-2 text-center font-bold">
                                 {{ story.title }}
                             </h2>
                             <div class="mt-auto flex flex-col items-center gap-3 pt-4">
 
                                 <a v-if="story.pdf_url" :href="story.pdf_url" target="_blank" rel="noreferrer"
                                     class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
-                                    Open story
+                                    {{ t('welcome.openStory') }}
                                 </a>
                             </div>
                         </div>
@@ -173,7 +180,7 @@ const setCategory = (category) => {
 
                     <div v-if="!featuredStories.length"
                         class="col-span-full rounded-2xl bg-white/80 p-6 text-center text-sm text-gray-600 shadow-inner">
-                        No stories published yet
+                        {{ t('welcome.empty') }}
                     </div>
                 </section>
             </main>
@@ -184,17 +191,10 @@ const setCategory = (category) => {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@96.2,300..700&display=swap');
-
-.comic-relief-bold {
-    font-family: "Comic Relief", system-ui;
-    font-weight: 700;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .welcome-shell {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .gradient-bg {

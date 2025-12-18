@@ -53,7 +53,7 @@ class StoryController extends Controller
 
         return redirect()
             ->route('stories')
-            ->with('success', 'Story added.');
+            ->with('success', __('stories.statuses.added'));
     }
 
     public function update(Request $request, Story $story): RedirectResponse
@@ -78,7 +78,7 @@ class StoryController extends Controller
 
         return redirect()
             ->route('stories')
-            ->with('success', 'Story updated.');
+            ->with('success', __('stories.statuses.updated'));
     }
 
     public function destroy(Story $story): RedirectResponse
@@ -89,7 +89,7 @@ class StoryController extends Controller
 
         return redirect()
             ->route('stories')
-            ->with('success', 'Story removed.');
+            ->with('success', __('stories.statuses.removed'));
     }
 
     private function validateStory(Request $request, bool $isUpdate = false): array

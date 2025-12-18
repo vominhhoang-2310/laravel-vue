@@ -1,0 +1,110 @@
+{
+    "nav": {
+        "backHome": "Back to home",
+        "addBooks": "Add books",
+        "stories": "Stories",
+        "profile": "Edit profile",
+        "logout": "Log out"
+    },
+    "welcome": {
+        "tag": "Popular books",
+        "headlineLead": "Discover your next",
+        "headlineHighlight": "big adventure",
+        "subhead": "Browse the latest stories from the community",
+        "category": {
+            "animals": "Animals",
+            "spaces": "Spaces",
+            "life": "Life"
+        },
+        "openStory": "Open story",
+        "noImage": "No image",
+        "empty": "No stories published yet"
+    },
+    "about": {
+        "eyebrow": "About",
+        "title": "Welcome to Story Time",
+        "introOne": "Welcome to Story Time — a warm, playful digital library built for parents and children (ages 3–8) to enjoy stories together. It’s a place where you can store, organize, and revisit your favorite children’s books in one simple space, whether you’re reading at bedtime, during quiet time, or squeezing in a quick story before heading out the door.",
+        "introTwo": "This app started as a personal project, but it’s driven by something bigger: my belief in the power of early literacy. I care deeply about children’s education, and I wanted to create a tool that encourages reading as a daily habit. Research and real life both show that early reading helps children build vocabulary, comprehension, attention, empathy, and imagination — and when parents read with kids, that shared time becomes a strong foundation for learning and emotional connection.",
+        "forKids": "For kids",
+        "kidsPointOne": "Large, friendly typography and bright visuals.",
+        "kidsPointTwo": "Easy-to-understand layout that makes picking a book feel fun and independent.",
+        "forParents": "For parents",
+        "parentsPointOne": "Clean, modern interface with simple organization.",
+        "parentsPointTwo": "Quickly find the right story for bedtime, quiet time, or on-the-go reading.",
+        "closingOne": "You’ll also notice the design choices are intentional. The app aims for high contrast, clear spacing, and big tap targets to support accessibility and reduce frustration for little hands. The overall experience is meant to feel welcoming and calm — a friendly “bookshelf” rather than a complicated app.",
+        "closingTwo": "At its heart, Story Time is about community. I’m building it because I want to contribute something meaningful: a safe, delightful reading space that supports families and helps children fall in love with books. If it makes story time easier, helps a child discover a new favorite character, or gives parents a simple way to keep stories organized, then it’s already doing what I hoped it would do.",
+        "closingThanks": "Thank you for being part of this journey — and happy reading!"
+    },
+    "stories": {
+        "title": "Story generator",
+        "help": "Keep fields short and descriptive. Upload a thumbnail image from your device and link to the PDF.",
+        "fields": {
+            "title": "Title",
+            "author": "Author",
+            "year": "Published year",
+            "category": "Category",
+            "pdf": "Upload PDF",
+            "thumbnail": "Upload thumbnail",
+            "description": "Description"
+        },
+        "buttons": {
+            "add": "Add story",
+            "update": "Update story",
+            "cancel": "Cancel"
+        },
+        "selectCategory": "Select a category",
+        "statuses": {
+            "added": "Story added.",
+            "updated": "Story updated.",
+            "removed": "Story removed."
+        },
+        "deleteConfirm": "Delete this story?"
+    },
+    "savedStories": {
+        "title": "Saved stories",
+        "subtitle": "Click a story to edit.",
+        "count": "{count} saved",
+        "empty": "No stories yet. Add one using the form to the left.",
+        "noImage": "No image",
+        "openPdf": "Open PDF",
+        "delete": "Delete"
+    },
+    "contact": {
+        "eyebrow": "Contact",
+        "title": "Get in touch",
+        "p1": "Thank you for your interest in Story Time! This platform was built to support parents and young readers (ages 3–8), and I’m always happy to hear from the community.",
+        "p2": "If you have questions, feedback, or ideas to improve the experience, please don’t hesitate to reach out. I’d also love to connect if you’d like to become a contributor—whether that means suggesting new stories, helping with translations, improving accessibility, or collaborating on features that make reading time even better for families.",
+        "p3": "I’ll do my best to respond as soon as possible. Thanks again for supporting a project made with learning, storytelling, and community in mind.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "upload": "Upload file (optional)",
+            "message": "Message",
+            "send": "Send message",
+            "subjects": {
+                "inquiry": "General Inquiry",
+                "feedback": "Feedback/Suggestions",
+                "bug": "Bug Report",
+                "feature": "Feature Request",
+                "contribute": "Becoming a Contributor"
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Cozy stories, happy kids",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "common": {
+        "searchStories": "Search stories...",
+        "openStory": "Open story",
+        "noStories": "No stories published yet",
+        "noImage": "No image",
+        "password": "Password",
+        "forgotPassword": "Forgot password?",
+        "rememberMe": "Remember me",
+        "login": "Log in",
+        "hiThere": "Hi there"
+    }
+}

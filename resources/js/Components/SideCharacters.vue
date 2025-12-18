@@ -1,3 +1,9 @@
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
+
 <template>
     <!-- Left Side Characters (Integrated look) -->
     <div class="side-character left-8 hidden lg:block animate-float opacity-80">
@@ -8,7 +14,7 @@
             </div>
             <div
                 class="absolute -top-4 -right-12 glass px-4 py-2 rounded-2xl rounded-bl-none shadow-sm animate-bounce text-sm font-bold text-indigo-600">
-                Hi there! 👋
+                {{ t('common.hiThere') }}! 👋
             </div>
         </div>
         <div class="text-[80px] text-emerald-400/80 mt-8 ml-8 drop-shadow-md animate-float-delayed">

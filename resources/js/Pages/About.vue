@@ -4,12 +4,15 @@ import GuestLayout from '@/Layouts/GuestLayout.vue';
 import Footer from '@/Components/Footer.vue';
 import MusicButton from '@/Components/MusicButton.vue';
 import SideCharacters from '@/Components/SideCharacters.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
     <GuestLayout fluid>
 
-        <Head title="About" />
+        <Head :title="t('about.eyebrow')" />
         <div class="flex min-h-screen flex-col">
             <SideCharacters />
             <div class="relative z-10 mx-auto max-w-5xl px-4 pt-[160px] pb-12 flex-1">
@@ -18,12 +21,10 @@ import SideCharacters from '@/Components/SideCharacters.vue';
                         <div>
                             <p
                                 class="mb-2 inline-flex items-center gap-2 rounded-full bg-indigo-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
-                                About
+                                {{ t('about.eyebrow') }}
                             </p>
                             <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
-                                Welcome to <span
-                                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Story
-                                    Time</span>
+                                {{ t('about.title') }}
                             </h1>
                         </div>
                         <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-glow"
@@ -38,50 +39,38 @@ import SideCharacters from '@/Components/SideCharacters.vue';
 
                     <div class="space-y-6 text-slate-700 leading-relaxed">
                         <p>
-                            Welcome to Story Time — a warm, playful digital library built for parents and children (ages
-                            3–8) to enjoy stories together. It’s a place where you can store, organize, and revisit your
-                            favorite children’s books in one simple space, whether you’re reading at bedtime, during
-                            quiet time, or squeezing in a quick story before heading out the door.
+                            {{ t('about.introOne') }}
                         </p>
                         <p>
-                            This app started as a personal project, but it’s driven by something bigger: my belief in
-                            the
-                            power of early literacy. I care deeply about children’s education, and I wanted to create a
-                            tool that encourages reading as a daily habit. Research and real life both show that early
-                            reading helps children build vocabulary, comprehension, attention, empathy, and imagination
-                            —
-                            and when parents read with kids, that shared time becomes a strong foundation for learning
-                            and
-                            emotional connection.
+                            {{ t('about.introTwo') }}
                         </p>
                     </div>
 
                     <div class="mt-10 grid gap-6 md:grid-cols-2">
                         <article class="rounded-2xl bg-indigo-50 p-6 shadow-inner ring-1 ring-indigo-100">
-                            <h2 class="text-xl font-semibold text-indigo-900">For kids</h2>
+                            <h2 class="text-center text-xl font-semibold text-indigo-900">{{ t('about.forKids') }}</h2>
                             <ul class="mt-3 space-y-2 text-slate-700">
                                 <li class="flex items-start gap-2">
                                     <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
-                                    <span>Large, friendly typography and bright visuals.</span>
+                                    <span>{{ t('about.kidsPointOne') }}</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
-                                    <span>Easy-to-understand layout that makes picking a book feel fun and
-                                        independent.</span>
+                                    <span>{{ t('about.kidsPointTwo') }}</span>
                                 </li>
                             </ul>
                         </article>
                         <article class="rounded-2xl bg-emerald-50 p-6 shadow-inner ring-1 ring-emerald-100">
-                            <h2 class="text-xl font-semibold text-emerald-900">For parents</h2>
+                            <h2 class="text-center text-xl font-semibold text-emerald-900">{{ t('about.forParents') }}
+                            </h2>
                             <ul class="mt-3 space-y-2 text-slate-700">
                                 <li class="flex items-start gap-2">
                                     <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>
-                                    <span>Clean, modern interface with simple organization.</span>
+                                    <span>{{ t('about.parentsPointOne') }}</span>
                                 </li>
                                 <li class="flex items-start gap-2">
                                     <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-emerald-500"></span>
-                                    <span>Quickly find the right story for bedtime, quiet time, or on-the-go
-                                        reading.</span>
+                                    <span>{{ t('about.parentsPointTwo') }}</span>
                                 </li>
                             </ul>
                         </article>
@@ -89,32 +78,18 @@ import SideCharacters from '@/Components/SideCharacters.vue';
 
                     <div class="mt-10 space-y-4 text-slate-700 leading-relaxed">
                         <p>
-                            You’ll also notice the design choices are intentional. The app aims for high contrast, clear
-                            spacing, and big tap targets to support accessibility and reduce frustration for little
-                            hands.
-                            The overall experience is meant to feel welcoming and calm — a friendly “bookshelf” rather
-                            than
-                            a complicated app.
+                            {{ t('about.closingOne') }}
                         </p>
                         <p>
-                            At its heart, Story Time is about community. I’m building it because I want to contribute
-                            something meaningful: a safe, delightful reading space that supports families and helps
-                            children
-                            fall in love with books. If it makes story time easier, helps a child discover a new
-                            favorite
-                            character, or gives parents a simple way to keep stories organized, then it’s already doing
-                            what
-                            I hoped it would do.
+                            {{ t('about.closingTwo') }}
                         </p>
                         <p class="font-semibold text-slate-900">
-                            Thank you for being part of this journey — and happy reading!
+                            {{ t('about.closingThanks') }} <i class="fa-solid fa-heart"></i>
                         </p>
                     </div>
                 </section>
             </div>
-            <div style="font-family: 'Figtree', sans-serif;">
-                <Footer />
-            </div>
+            <Footer />
         </div>
         <MusicButton />
     </GuestLayout>

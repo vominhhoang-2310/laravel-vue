@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
 const props = defineProps({
     stories: {
         type: Array,
@@ -15,6 +17,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['select', 'delete']);
+const { t } = useI18n();
 </script>
 
 <template>
@@ -22,22 +25,22 @@ const emit = defineEmits(['select', 'delete']);
         <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
             <div>
                 <p class="text-sm font-semibold uppercase tracking-wide text-indigo-700">
-                    Saved stories
+                    {{ t('savedStories.title') }}
                 </p>
                 <p class="text-sm text-gray-600">
-                    Click a story to edit.
+                    {{ t('savedStories.subtitle') }}
                 </p>
             </div>
             <span
                 class="inline-flex items-center justify-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-indigo-700 shadow-sm ring-1 ring-indigo-100"
                 aria-label="Total saved stories">
-                {{ props.stories.length }} saved
+                {{ t('savedStories.count', { count: props.stories.length }) }}
             </span>
         </div>
 
         <div v-if="!props.stories.length"
             class="mt-6 rounded-lg border border-dashed border-gray-300 bg-gray-50 px-4 py-8 text-center text-sm text-gray-600">
-            No stories yet. Add one using the form to the left.
+            {{ t('savedStories.empty') }}
         </div>
 
         <ul v-else class="mt-4 divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-100 bg-white/80"
@@ -54,7 +57,7 @@ const emit = defineEmits(['select', 'delete']);
                         decoding="async" />
                     <div v-else
                         class="flex h-full w-full items-center justify-center text-xs font-semibold text-gray-400">
-                        No image
+                        {{ t('savedStories.noImage') }}
                     </div>
                 </div>
 
@@ -68,12 +71,12 @@ const emit = defineEmits(['select', 'delete']);
                 <div class="flex flex-shrink-0 items-center gap-[20px]">
                     <a class="text-sm font-semibold text-indigo-700 hover:text-indigo-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                         :href="story.pdf_url || story.pdf_link" target="_blank" rel="noreferrer" @click.stop>
-                        Open PDF
+                        {{ t('savedStories.openPdf') }}
                     </a>
                     <button type="button"
                         class="inline-flex items-center rounded-md border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-red-700 transition hover:bg-red-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 disabled:opacity-50"
                         :disabled="props.processing" @click.stop="emit('delete', story.id)">
-                        Delete
+                        {{ t('savedStories.delete') }}
                     </button>
                 </div>
             </li>

@@ -82,6 +82,18 @@ return [
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Supported Locales
+    |--------------------------------------------------------------------------
+    |
+    | List of locales the application allows. Used for locale switching and
+    | sharing with the frontend.
+    |
+    */
+
+    'supported_locales' => ['en', 'vn'],
+
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
 
     /*

@@ -1,5 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import { useI18n } from 'vue-i18n';
+import LocaleSwitch from '@/Components/LocaleSwitch.vue';
 
 defineProps({
     fluid: {
@@ -11,6 +13,8 @@ defineProps({
         default: false,
     },
 });
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -40,10 +44,13 @@ defineProps({
                         Story Time
                     </span>
                 </Link>
-                <Link :href="route('welcome')"
-                    class="hidden items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-indigo-600 shadow-sm transition hover:bg-indigo-50 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 sm:inline-flex">
-                    Back to home
-                </Link>
+                <div class="flex items-center gap-4">
+                    <Link :href="route('welcome')"
+                        class="hidden items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-indigo-600 shadow-sm transition hover:bg-indigo-50 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 sm:inline-flex">
+                        {{ t('nav.backHome') }}
+                    </Link>
+                    <LocaleSwitch />
+                </div>
             </nav>
         </div>
 
@@ -61,7 +68,7 @@ defineProps({
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@96.2,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .gradient-bg {
     position: fixed;
@@ -119,7 +126,7 @@ defineProps({
 }
 
 .font-fredoka {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 @keyframes blob {

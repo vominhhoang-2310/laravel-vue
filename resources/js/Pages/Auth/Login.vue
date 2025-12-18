@@ -5,6 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import Checkbox from '@/Components/Checkbox.vue';
+import { useI18n } from 'vue-i18n';
 
 defineProps({
     canResetPassword: {
@@ -14,6 +15,8 @@ defineProps({
         type: String,
     },
 });
+
+const { t } = useI18n();
 
 const form = useForm({
     email: '',
@@ -67,7 +70,7 @@ const submit = () => {
                     </div>
 
                     <div class="space-y-1">
-                        <InputLabel for="password" value="Password" />
+                        <InputLabel for="password" :value="t('common.password')" />
                         <TextInput id="password" type="password"
                             class="mt-1 block w-full rounded-xl border border-white/60 bg-white/80 px-4 py-3 shadow-inner focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200"
                             v-model="form.password" required autocomplete="current-password" />
@@ -77,11 +80,11 @@ const submit = () => {
                     <div class="flex items-center justify-between text-sm text-slate-600">
                         <label class="flex items-center gap-2">
                             <Checkbox name="remember" v-model:checked="form.remember" />
-                            <span>Remember me</span>
+                            <span>{{ t('common.rememberMe') }}</span>
                         </label>
                         <Link v-if="canResetPassword" :href="route('password.request')"
                             class="font-semibold text-indigo-600 underline-offset-4 hover:text-indigo-800">
-                            Forgot password?
+                            {{ t('common.forgotPassword') }}
                         </Link>
                     </div>
 
@@ -89,7 +92,7 @@ const submit = () => {
                         class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                         :class="{ 'opacity-50': form.processing }" :disabled="form.processing">
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                        Log in
+                        {{ t('common.login') }}
                     </button>
 
                     <!--<p class="text-center text-xs text-slate-500">

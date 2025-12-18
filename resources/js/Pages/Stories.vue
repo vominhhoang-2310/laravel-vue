@@ -9,6 +9,7 @@ import TextInput from '@/Components/TextInput.vue';
 import SearchBar from '@/Components/SearchBar.vue';
 import { Head, useForm, usePage } from '@inertiajs/vue3';
 import { computed, ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
     stories: {
@@ -37,6 +38,7 @@ const thumbnailPreview = ref(null);
 const pdfInput = ref(null);
 const pdfPreview = ref(null);
 const page = usePage();
+const { t } = useI18n();
 
 watch(
     () => page.props.flash?.success,
@@ -118,7 +120,7 @@ const submit = () => {
                 form.transform((data) => data);
             },
             onSuccess: () => {
-                liveMessage.value = 'Story updated.';
+                liveMessage.value = t('stories.statuses.updated');
                 startCreate();
             },
         });
@@ -129,14 +131,14 @@ const submit = () => {
         preserveScroll: true,
         forceFormData: true,
         onSuccess: () => {
-            liveMessage.value = 'Story added.';
+            liveMessage.value = t('stories.statuses.added');
             startCreate();
         },
     });
 };
 
 const confirmDelete = (storyId) => {
-    if (deleteForm.processing || !confirm('Delete this story?')) {
+    if (deleteForm.processing || !confirm(t('stories.deleteConfirm'))) {
         return;
     }
 
@@ -146,7 +148,7 @@ const confirmDelete = (storyId) => {
             if (activeStoryId.value === storyId) {
                 startCreate();
             }
-            liveMessage.value = 'Story removed.';
+            liveMessage.value = t('stories.statuses.removed');
         },
     });
 };
@@ -155,7 +157,7 @@ const confirmDelete = (storyId) => {
 
 <template>
 
-    <Head title="Stories" />
+    <Head :title="t('nav.stories')" />
 
     <AuthenticatedLayout>
         <template #header>
@@ -163,11 +165,8 @@ const confirmDelete = (storyId) => {
                 <div>
 
                     <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                        Story generator
+                        {{ t('stories.title') }}
                     </h2>
-                    <p class="text-sm text-gray-600">
-                        Build a library of stories. Select a card on the right to edit or delete.
-                    </p>
                 </div>
             </div>
         </template>
@@ -178,12 +177,10 @@ const confirmDelete = (storyId) => {
                     <section class="rounded-lg bg-white p-6 shadow sm:p-8 w-full max-w-3xl mx-auto">
                         <div class="flex flex-col gap-2">
                             <p class="text-sm font-semibold uppercase tracking-wide text-indigo-700">
-                                Story generator
+                                {{ t('stories.title') }}
                             </p>
                             <p class="text-sm text-gray-600">
-                                Keep fields short and descriptive. Upload a thumbnail image from your device and link to
-                                the
-                                PDF.
+                                {{ t('stories.help') }}
                             </p>
                         </div>
 
@@ -199,40 +196,40 @@ const confirmDelete = (storyId) => {
 
                         <form class="mt-6 grid w-full max-w-full gap-5 sm:max-w-2xl" @submit.prevent="submit">
                             <div class="grid gap-1.5">
-                                <InputLabel for="title" value="Title" />
+                                <InputLabel for="title" :value="t('stories.fields.title')" />
                                 <TextInput id="title" v-model="form.title" type="text" required maxlength="255"
                                     autocomplete="off" class="w-full" />
                                 <InputError :message="form.errors.title" />
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="author" value="Author" />
+                                <InputLabel for="author" :value="t('stories.fields.author')" />
                                 <TextInput id="author" v-model="form.author" type="text" required maxlength="255"
                                     autocomplete="off" class="w-full" />
                                 <InputError :message="form.errors.author" />
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="published_year" value="Published year" />
+                                <InputLabel for="published_year" :value="t('stories.fields.year')" />
                                 <TextInput id="published_year" v-model="form.published_year" type="number"
                                     inputmode="numeric" min="0" max="2100" required class="w-full" />
                                 <InputError :message="form.errors.published_year" />
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="category" value="Category" />
+                                <InputLabel for="category" :value="t('stories.fields.category')" />
                                 <select id="category" v-model="form.category" name="category" required
                                     class="w-full rounded-md border-gray-300 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                    <option disabled value="">Select a category</option>
+                                    <option disabled value="">{{ t('stories.selectCategory') }}</option>
                                     <option v-for="option in categories" :key="option" :value="option">
-                                        {{ option }}
+                                        {{ t(`welcome.category.${option.toLowerCase()}`) }}
                                     </option>
                                 </select>
                                 <InputError :message="form.errors.category" />
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="pdf_link" value="Upload PDF" />
+                                <InputLabel for="pdf_link" :value="t('stories.fields.pdf')" />
                                 <input id="pdf_link" ref="pdfInput" type="file" name="pdf_link" accept="application/pdf"
                                     :required="!isEditing"
                                     class="block w-full cursor-pointer rounded-md border border-dashed border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-700 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
@@ -246,7 +243,7 @@ const confirmDelete = (storyId) => {
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="thumbnail" value="Upload thumbnail" />
+                                <InputLabel for="thumbnail" :value="t('stories.fields.thumbnail')" />
                                 <input id="thumbnail" ref="thumbnailInput" type="file" name="thumbnail" accept="image/*"
                                     :required="!isEditing"
                                     class="block w-full cursor-pointer rounded-md border border-dashed border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-700 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1"
@@ -265,7 +262,7 @@ const confirmDelete = (storyId) => {
                             </div>
 
                             <div class="grid gap-1.5">
-                                <InputLabel for="description" value="Description" />
+                                <InputLabel for="description" :value="t('stories.fields.description')" />
                                 <textarea id="description" v-model="form.description" rows="4"
                                     class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
                                 <InputError :message="form.errors.description" />
@@ -275,21 +272,21 @@ const confirmDelete = (storyId) => {
                                 <PrimaryButton type="submit" :disabled="form.processing" :class="[
                                     'disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500',
                                 ]">
-                                    {{ isEditing ? 'Update story' : 'Add story' }}
+                                    {{ isEditing ? t('stories.buttons.update') : t('stories.buttons.add') }}
                                 </PrimaryButton>
                                 <SecondaryButton
                                     v-show="form.title || form.author || form.published_year || form.pdf_link || form.thumbnail || form.description"
                                     type="button" :disabled="form.processing" @click="startCreate" :class="[
                                         'inline-flex items-center rounded-md border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-red-700 transition hover:bg-red-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500 disabled:opacity-50',
                                     ]">
-                                    Cancel
+                                    {{ t('stories.buttons.cancel') }}
                                 </SecondaryButton>
                             </div>
                         </form>
                     </section>
 
                     <div class="space-y-4">
-                        <SearchBar v-model="searchTerm" placeholder="Search stories..." />
+                        <SearchBar v-model="searchTerm" :placeholder="t('common.searchStories')" />
 
                         <SavedStories :stories="filteredStories" :active-story-id="activeStoryId"
                             :processing="form.processing || deleteForm.processing" @select="selectStory"
