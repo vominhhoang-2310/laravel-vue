@@ -27,14 +27,6 @@ const { t } = useI18n();
                                 {{ t('about.title') }}
                             </h1>
                         </div>
-                        <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-glow"
-                            aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-7 w-7"
-                                fill="currentColor">
-                                <path
-                                    d="M0 96C0 60.7 28.7 32 64 32H272V448H64c-35.3 0-64-28.7-64-64V96zM576 96V384c0 35.3-28.7 64-64 64H304V32H512c35.3 0 64-28.7 64 64z" />
-                            </svg>
-                        </div>
                     </div>
 
                     <div class="space-y-6 text-slate-700 leading-relaxed">

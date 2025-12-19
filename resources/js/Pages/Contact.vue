@@ -133,7 +133,7 @@ const submit = () => {
 
                         <div class="flex justify-center">
                             <button type="submit" :disabled="form.processing"
-                                class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 disabled:opacity-50">
+                                class="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 disabled:opacity-50">
                                 <span v-if="form.processing"
                                     class="h-3 w-3 animate-spin rounded-full border-2 border-white/70 border-t-transparent"></span>
                                 {{ t('contact.form.send') }}

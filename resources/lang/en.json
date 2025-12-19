@@ -81,7 +81,7 @@
             "subject": "Subject",
             "upload": "Upload file (optional)",
             "message": "Message",
-            "send": "Send message",
+            "send": "Send",
             "subjects": {
                 "inquiry": "General Inquiry",
                 "feedback": "Feedback/Suggestions",

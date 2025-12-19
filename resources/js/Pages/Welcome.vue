@@ -55,7 +55,7 @@ const setCategory = (category) => {
                 <nav
                     class="glass flex w-full max-w-6xl flex-col gap-3 rounded-3xl px-6 py-4 shadow-soft transition md:flex-row md:items-center md:justify-between md:rounded-full md:py-3">
                     <div class="flex w-full items-center gap-3 md:w-auto md:flex-none">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow"
+                        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-rose-500 text-white shadow-glow"
                             aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-5 w-5"
                                 fill="currentColor">
@@ -63,8 +63,7 @@ const setCategory = (category) => {
                                     d="M0 96C0 60.7 28.7 32 64 32H272V448H64c-35.3 0-64-28.7-64-64V96zM576 96V384c0 35.3-28.7 64-64 64H304V32H512c35.3 0 64 28.7 64 64z" />
                             </svg>
                         </div>
-                        <span
-                            class="text-2xl font-bold text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text">
+                        <span class="text-2xl font-bold text-transparent bg-rose-600 bg-clip-text">
                             Story Time
                         </span>
                         <div class="ml-auto md:hidden">
@@ -105,8 +104,7 @@ const setCategory = (category) => {
                     </span>
                     <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
                         {{ t('welcome.headlineLead') }}
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                        <span class="text-transparent bg-clip-text bg-red-500">
                             {{ t('welcome.headlineHighlight') }}
                         </span>
                     </h1>
@@ -171,7 +169,7 @@ const setCategory = (category) => {
                             <div class="mt-auto flex flex-col items-center gap-3 pt-4">
 
                                 <a v-if="story.pdf_url" :href="story.pdf_url" target="_blank" rel="noreferrer"
-                                    class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
+                                    class="inline-flex items-center gap-2 rounded-full bg-rose-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">
                                     {{ t('welcome.openStory') }}
                                 </a>
                             </div>

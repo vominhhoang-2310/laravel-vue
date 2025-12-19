@@ -46,10 +46,6 @@ const submit = () => {
 
             <div class="relative">
                 <div class="mb-6 flex items-center gap-3">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow"
-                        aria-hidden="true">
-                        <i class="fa-solid fa-book-open"></i>
-                    </div>
                     <div>
                         <p class="text-xs uppercase tracking-wide text-indigo-500 font-bold">Welcome back</p>
                         <h1 class="text-xl font-bold text-slate-900">Log in to Story Time</h1>
@@ -89,7 +85,7 @@ const submit = () => {
                     </div>
 
                     <button type="submit"
-                        class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                        class="flex w-full items-center justify-center gap-2 rounded-full bg-indigo-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                         :class="{ 'opacity-50': form.processing }" :disabled="form.processing">
                         <i class="fa-solid fa-arrow-right-to-bracket"></i>
                         {{ t('common.login') }}

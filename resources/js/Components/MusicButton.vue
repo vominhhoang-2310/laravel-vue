@@ -65,7 +65,7 @@ onBeforeUnmount(() => {
 <template>
     <button type="button" @click="toggleAudio" :class="[
         positionClass,
-        'z-40 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 text-white shadow-glow transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400',
+        'z-40 flex h-14 w-14 items-center justify-center rounded-full bg-pink-500 text-white shadow-glow transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400',
     ]" :aria-pressed="isPlaying" :aria-label="isPlaying ? 'Pause background music' : 'Play background music'">
         <i v-if="isPlaying" class="fa-solid fa-music text-lg"></i>
         <i v-else class="fa-solid fa-volume-xmark text-lg"></i>

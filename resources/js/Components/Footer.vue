@@ -8,9 +8,10 @@ const { t } = useI18n();
 <template>
     <footer
         class="sticky bottom-0 z-20 flex flex-wrap items-center justify-between gap-4 bg-white/90 px-6 py-4 text-sm text-slate-700 shadow-soft ring-1 ring-white/60 backdrop-blur max-[459px]:flex-col max-[459px]:items-center max-[459px]:justify-center">
-        <div class="flex items-center gap-3 text-slate-800 max-[459px]:justify-center max-[459px]:w-full max-[459px]:justify-center">
+        <div
+            class="flex items-center gap-3 text-slate-800 max-[459px]:justify-center max-[459px]:w-full max-[459px]:justify-center">
             <span
-                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow">
+                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-500 text-white shadow-glow">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-4 w-4" fill="currentColor">
                     <path
                         d="M0 96C0 60.7 28.7 32 64 32H272V448H64c-35.3 0-64-28.7-64-64V96zM576 96V384c0 35.3-28.7 64-64 64H304V32H512c35.3 0 64 28.7 64 64z" />

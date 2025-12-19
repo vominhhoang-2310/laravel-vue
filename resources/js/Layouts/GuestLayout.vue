@@ -35,12 +35,11 @@ const { t } = useI18n();
             <nav
                 class="glass flex w-full max-w-5xl items-center justify-between rounded-full px-6 py-3 shadow-soft transition">
                 <Link :href="route('welcome')" class="flex items-center gap-3">
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-glow"
+                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-rose-500 text-white"
                         aria-hidden="true">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <span
-                        class="text-2xl font-bold text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text">
+                    <span class="text-2xl font-bold text-transparent bg-rose-600 bg-clip-text">
                         Story Time
                     </span>
                 </Link>
