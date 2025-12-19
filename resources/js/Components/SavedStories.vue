@@ -43,7 +43,8 @@ const { t } = useI18n();
             {{ t('savedStories.empty') }}
         </div>
 
-        <ul v-else class="mt-4 divide-y divide-gray-100 overflow-hidden rounded-xl border border-gray-100 bg-white/80"
+        <ul v-else
+            class="mt-4 max-h-[calc(8*5.5rem)] overflow-y-auto divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white/80 pr-1"
             aria-label="Saved stories">
             <li v-for="story in props.stories" :key="story.id" :class="[
                 'flex items-center gap-4 px-3 py-3 sm:px-4 transition hover:bg-indigo-50/60',
