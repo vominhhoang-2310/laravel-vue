@@ -108,5 +108,43 @@
         "hiThere": "Hi there",
         "notFound": "Page not found",
         "notFoundMessage": "Sorry, the page you are looking for does not exist"
+    },
+    "profile": {
+        "title": "Profile",
+        "subtitle": "Your account information",
+        "description": "Update your profile and email address.",
+        "passwordTitle": "Update Password",
+        "passwordDescription": "Ensure your account is using a long, random password to stay secure.",
+        "fields": {
+            "name": "Name",
+            "currentPassword": "Current password",
+            "newPassword": "New password",
+            "passwordConfirmation": "Confirm password"
+        },
+        "buttons": {
+            "save": "Save",
+            "cancel": "Cancel",
+            "delete": "Delete account"
+        },
+        "statuses": {
+            "updated": "Profile updated."
+        },
+        "delete": {
+            "title": "Delete account",
+            "description": "Once your account is deleted, all your data and stories will be permanently removed. Before deleting your account, please download any data or stories you wish to keep.",
+            "confirmTitle": "Are you sure you want to delete your account?",
+            "confirmMessage": "This action cannot be undone. Make sure you have downloaded all your data you wish to keep. Please enter your password to confirm you would like to permanently delete your account."
+        }   
+    },
+    "dashboard": {
+        "totalStories": "Total stories",
+        "newStories": "New this week",
+        "showList": "Show list",
+        "hideList": "Hide list",
+        "close": "Close",
+        "addedthisweek": "Added this week",
+        "books": "books",
+        "book": "book",
+        "noBooks": "No books added this week"
     }
 }

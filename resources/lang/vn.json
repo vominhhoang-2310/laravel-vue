@@ -2,7 +2,6 @@
     "nav": {
         "backHome": "Về trang chủ",
         "addBooks": "Thêm truyện",
-        "dashboard": "Bảng điều khiển",
         "stories": "Truyện",
         "profile": "Chỉnh sửa hồ sơ",
         "logout": "Đăng xuất"
@@ -109,5 +108,43 @@
         "hiThere": "Chào bạn nhỏ",
         "notFound": "Không tìm thấy trang này",
         "notFoundMessage": "Xin lỗi, trang bạn đang tìm không tồn tại"
+    },
+    "profile": {
+        "title": "Hồ sơ",
+        "subtitle": "Thông tin tài khoản của bạn",
+        "description": "Cập nhật thông tin hồ sơ và địa chỉ email của bạn.",
+        "passwordTitle": "Đổi mật khẩu",
+        "passwordDescription": "Đảm bảo tài khoản của bạn sử dụng mật khẩu dài, ngẫu nhiên để giữ an toàn.",
+        "fields": {
+            "name": "Tên",
+            "currentPassword": "Mật khẩu hiện tại",
+            "newPassword": "Mật khẩu mới",
+            "passwordConfirmation": "Xác nhận mật khẩu"
+        },  
+        "buttons": {
+            "save": "Lưu",
+            "cancel": "Hủy",
+            "delete": "Xóa tài khoản"
+        },
+        "statuses": {
+            "updated": "Hồ sơ đã được cập nhật."    
+        },
+        "delete": {
+            "title": "Xóa tài khoản",
+            "description": "Khi tài khoản của bạn bị xóa, tất cả dữ liệu và truyện của bạn cũng sẽ bị xóa vĩnh viễn. Trước khi xóa tài khoản, vui lòng tải xuống bất kỳ dữ liệu hoặc truyện nào mà bạn muốn giữ lại.",
+            "confirmTitle": "Bạn có chắc chắn muốn xóa tài khoản này không?",
+            "confirmMessage": "Sau khi tài khoản bị xóa, tất cả dữ liệu và truyện của bạn sẽ bị xóa vĩnh viễn. Vui lòng nhập mật khẩu của bạn để xác nhận rằng bạn muốn xóa vĩnh viễn tài khoản của mình."
+        }
+    },
+    "dashboard": {
+        "totalStories": "Tổng số truyện",
+        "newStories": "Truyện mới trong tuần",
+        "showList": "Hiển thị danh sách",
+        "hideList": "Ẩn danh sách",
+        "close": "Đóng",
+        "addedthisweek": "Đã thêm trong tuần",
+        "books": "truyện",
+        "book": "truyện",
+        "noBooks": "Chưa có truyện nào được thêm vào trong tuần này"
     }
 }

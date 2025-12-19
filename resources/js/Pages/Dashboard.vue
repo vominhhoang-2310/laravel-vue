@@ -1,8 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
-
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
     stats: {
@@ -17,6 +17,7 @@ const props = defineProps({
         default: () => [],
     },
 });
+const { t } = useI18n();
 
 const showWeekly = ref(false);
 </script>
@@ -47,8 +48,8 @@ const showWeekly = ref(false);
                             </svg>
                         </span>
                         <div class="flex flex-col">
-                            <span class="text-sm font-semibold uppercase tracking-wide text-gray-600">Total
-                                stories</span>
+                            <span class="text-sm font-semibold uppercase tracking-wide text-gray-600">{{
+                                t('dashboard.totalStories') }}</span>
                             <span class="text-3xl font-bold text-gray-900" aria-live="polite">
                                 {{ stats.total }}
                             </span>
@@ -57,9 +58,8 @@ const showWeekly = ref(false);
 
                     <article
                         class="flex cursor-pointer items-center gap-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
-                        role="status" aria-label="New stories this week" tabindex="0"
-                        @click="showWeekly = !showWeekly" @keyup.enter="showWeekly = !showWeekly"
-                        @keyup.space.prevent="showWeekly = !showWeekly">
+                        role="status" aria-label="New stories this week" tabindex="0" @click="showWeekly = !showWeekly"
+                        @keyup.enter="showWeekly = !showWeekly" @keyup.space.prevent="showWeekly = !showWeekly">
                         <span
                             class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-emerald-700"
                             aria-hidden="true">
@@ -71,13 +71,13 @@ const showWeekly = ref(false);
                         </span>
                         <div class="flex flex-col">
                             <span class="text-sm font-semibold uppercase tracking-wide text-gray-600">
-                                New this week
+                                {{ t('dashboard.newStories') }}
                             </span>
                             <span class="text-3xl font-bold text-gray-900" aria-live="polite">
                                 {{ stats.weekly }}
                             </span>
                             <span class="text-xs text-emerald-700">
-                                {{ showWeekly ? 'Hide list' : 'Show list' }}
+                                {{ showWeekly ? t('dashboard.hideList') : t('dashboard.showList') }}
                             </span>
                         </div>
                     </article>
@@ -89,26 +89,27 @@ const showWeekly = ref(false);
                     <header class="flex items-center justify-between border-b border-gray-100 px-4 py-3">
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-wide text-gray-700">
-                                Added this week
+                                {{ t('dashboard.addedthisweek') }}
                             </p>
                             <p class="text-xs text-gray-500">
-                                {{ weeklyStories.length }} {{ weeklyStories.length === 1 ? 'book' : 'books' }}
+                                {{ weeklyStories.length }} {{ weeklyStories.length === 1 ? t('dashboard.book') :
+                                    t('dashboard.books') }}
                             </p>
                         </div>
                         <button type="button"
                             class="text-sm font-semibold text-emerald-700 hover:text-emerald-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400"
                             @click="showWeekly = false">
-                            Close
+                            {{ t('dashboard.close') }}
                         </button>
                     </header>
                     <div v-if="weeklyStories.length === 0" class="px-4 py-6 text-sm text-gray-600">
-                        No books added this week.
+                        {{ t('dashboard.noBooks') }}
                     </div>
                     <ul v-else class="divide-y divide-gray-100">
                         <li v-for="story in weeklyStories" :key="story.id" class="flex items-center gap-4 px-4 py-3">
-                            <img v-if="story.thumbnail_url || story.thumbnail" :src="story.thumbnail_url || story.thumbnail"
-                                :alt="`Cover for ${story.title}`" class="h-14 w-14 rounded-md object-cover" loading="lazy"
-                                decoding="async" />
+                            <img v-if="story.thumbnail_url || story.thumbnail"
+                                :src="story.thumbnail_url || story.thumbnail" :alt="`Cover for ${story.title}`"
+                                class="h-14 w-14 rounded-md object-cover" loading="lazy" decoding="async" />
                             <div class="flex-1">
                                 <p class="font-semibold text-gray-900">{{ story.title }}</p>
                                 <p class="text-sm text-gray-600">

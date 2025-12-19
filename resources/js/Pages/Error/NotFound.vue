@@ -1,12 +1,14 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import { Link } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 </script>
 
 <template>
+
+    <Head :title="t('common.notFound')" />
     <GuestLayout>
         <div class="relative z-10 mx-auto max-w-5xl px-4 p-12 flex-1">
             <section class="rounded-3xl bg-white/90 p-8 shadow-soft ring-1 ring-white/70 backdrop-blur">
