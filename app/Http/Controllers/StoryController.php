@@ -100,7 +100,7 @@ class StoryController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'author' => ['required', 'string', 'max:255'],
             'category' => ['required', 'string', 'max:255', 'in:Animals,Life,Spaces'],
-            'pdf_link' => [$isUpdate ? 'nullable' : 'required', 'file', 'mimes:pdf', 'max:20480'],
+            'pdf_link' => [$isUpdate ? 'nullable' : 'required', 'file', 'mimes:pdf', 'max:30720'],
             'description' => ['nullable', 'string'],
             'published_year' => ['required', 'integer', 'min:0', 'max:' . $maxYear],
             'thumbnail' => [$isUpdate ? 'nullable' : 'required', 'image', 'max:10000'],
