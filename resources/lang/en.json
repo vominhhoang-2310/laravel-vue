@@ -105,6 +105,8 @@
         "forgotPassword": "Forgot password?",
         "rememberMe": "Remember me",
         "login": "Log in",
-        "hiThere": "Hi there"
+        "hiThere": "Hi there",
+        "notFound": "Page not found",
+        "notFoundMessage": "Sorry, the page you are looking for does not exist"
     }
 }

@@ -106,6 +106,8 @@
         "forgotPassword": "Quên mật khẩu?",
         "rememberMe": "Ghi nhớ đăng nhập",
         "login": "Đăng nhập",
-        "hiThere": "Chào bạn nhỏ"
+        "hiThere": "Chào bạn nhỏ",
+        "notFound": "Không tìm thấy trang này",
+        "notFoundMessage": "Xin lỗi, trang bạn đang tìm không tồn tại"
     }
 }

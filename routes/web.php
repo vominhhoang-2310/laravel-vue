@@ -45,6 +45,10 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
+Route::get('/register', function () {
+    return Inertia::render('Error/NotFound');
+})->name('notfound');
+
 Route::get('/dashboard', function () {
     $totalStories = Story::count();
     $weeklyQuery = Story::whereBetween('created_at', [
