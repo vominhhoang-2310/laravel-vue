@@ -12,7 +12,7 @@ const { t } = useI18n();
             <section class="rounded-3xl bg-white/90 p-8 shadow-soft ring-1 ring-white/70 backdrop-blur">
                 <h1 class="text-center text-4xl font-extrabold text-indigo-600 pb-1">404</h1>
                 <h2 class="text-center text-2xl font-semibold text-gray-900 pb-2">{{ t('common.notFound') }}</h2>
-                <p class="text-center text-gray-600 whitespace-nowrap text-[11px] min-[360px]:text-xs sm:text-sm">
+                <p class="text-center text-gray-600 text-[11px] min-[360px]:text-xs sm:text-sm">
                     {{
                         t('common.notFoundMessage') }} <i class="fa-regular fa-face-frown"></i></p>
             </section>
