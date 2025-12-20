@@ -39,15 +39,15 @@ const { t } = useI18n();
                     </div>
 
                     <div class="mt-10 grid gap-6 md:grid-cols-2">
-                        <article class="rounded-2xl bg-indigo-50 p-6 shadow-inner ring-1 ring-indigo-100">
-                            <h2 class="text-center text-xl font-semibold text-indigo-900">{{ t('about.forKids') }}</h2>
+                        <article class="rounded-2xl bg-pink-50 p-6 shadow-inner ring-1 ring-pink-100">
+                            <h2 class="text-center text-xl font-semibold text-pink-700">{{ t('about.forKids') }}</h2>
                             <ul class="mt-3 space-y-2 text-slate-700">
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-pink-500"></span>
                                     <span>{{ t('about.kidsPointOne') }}</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-indigo-500"></span>
+                                    <span class="mt-[9px] h-2 w-2 shrink-0 rounded-full bg-pink-500"></span>
                                     <span>{{ t('about.kidsPointTwo') }}</span>
                                 </li>
                             </ul>
